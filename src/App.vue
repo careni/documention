@@ -2,7 +2,7 @@
   <div id="app">
     <div class="nav">
       <ul>
-        <li class="item selected" @click="select" @mousedown="downfuc" @mouseup="upfuc" data-router="readme">Ronnie UI</li>
+        <li class="item selected" @click="select" @mousedown="downfuc" @mouseup="upfuc" data-router="/">Ronnie UI</li>
         <li class="item" @click="select" @mousedown="downfuc" @mouseup="upfuc" data-router="header">Header</li>
         <li class="item" @click="select" @mousedown="downfuc" @mouseup="upfuc" data-router="footer">Footer</li>
         <li class="item" @click="select" @mousedown="downfuc" @mouseup="upfuc" data-router="button">Button</li>
@@ -35,8 +35,6 @@ export default {
         siblings[i].setAttribute('class', 'item')
       }
       evt.target.setAttribute('class', 'item selected')
-      console.log(evt)
-      // console.log(evt.target.getAttribute('data-router'))
       this.$router.push(evt.target.getAttribute('data-router'))
     },
     downfuc (evt) {
